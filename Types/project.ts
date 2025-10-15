@@ -4,4 +4,5 @@
    image: string;
    link: string;
    gitorweb: 'git' | 'web';
+   alt: string
  }
