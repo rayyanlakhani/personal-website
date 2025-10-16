@@ -17,19 +17,22 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./carousel";
+import Blureffect from "./blureffect";
+import Pattern from "./pattern";
 
 export default function Projects() {
   const projects: Project[] = [
     {
-      title: "Project 1",
-      description: "Description for Project 1",
-      image: "/",
-      link: "https://example.com/project1",
+      title: "Infection Modelling using SIR",
+      description:
+        "Uses SIR Modeling to predict various infections to make future decisions. Focus on Covid-19",
+      image: "/images/sirmodel.png",
+      link: "https://github.com/rayyanlakhani/Infection-Modellng-SIR-Model",
       gitorweb: "git",
-      alt: "Project 1 Screenshot",
+      alt: "Infection Modelling Screenshot",
     },
     {
-      title: "Project 2",
+      title: "Harrod Estate",
       description: "Description for Project 2",
       image: "/",
       link: "https://example.com/project2",
@@ -49,12 +52,11 @@ export default function Projects() {
   return (
     <section className="relative py-17 px-4 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-foreground/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      <Blureffect />
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16" >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4 py-2 leading-tight">
             My Projects
           </h2>
@@ -68,10 +70,13 @@ export default function Projects() {
             <span className="text-foreground font-medium">
               Interested in working together?
             </span>
-            <button className="group relative px-4 py-2 bg-primary text-primary-foreground rounded-2xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 hover:scale-105 active:scale-95 cursor-pointer touch-manipulation">
+            <a
+              href="#contact"
+              className="group relative px-4 py-2 bg-primary text-primary-foreground rounded-2xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-primary/40 hover:scale-105 active:scale-95 cursor-pointer touch-manipulation"
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-foreground rounded-2xl opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 -z-10" />
               Get in Touch
-            </button>
+            </a>
           </div>
         </div>
         {/* Desktop Projects Grid */}
@@ -86,7 +91,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-active:scale-105"
+                  className="p-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-active:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300" />
 
@@ -213,7 +218,7 @@ export default function Projects() {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
+      <Pattern />
     </section>
   );
 }

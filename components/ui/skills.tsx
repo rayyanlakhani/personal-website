@@ -1,7 +1,7 @@
 "use client";
 
 import { Skill } from "@/Types/skill";
-import { FaLinux } from "react-icons/fa";
+import { FaLinux, FaWordpressSimple } from "react-icons/fa";
 import {
   SiJavascript,
   SiReact,
@@ -13,34 +13,34 @@ import {
   SiPostgresql,
   SiPython,
 } from "react-icons/si";
+import Blureffect from "./blureffect";
+import Pattern from "./pattern";
 
 const skills: Skill[] = [
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
   { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#000000" }, // Fixed: changed from #fff
+  { name: "Next.js", icon: SiNextdotjs, color: "#fff" }, // Fixed: changed from #fff
   { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
   { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-  { name: "Python", icon: SiPython, color: "#3776AB" }, // Fixed: proper Python blue
-  { name: "Linux", icon: FaLinux, color: "#000000" }, // Fixed: changed from #ffff
+  { name: "WordPress", icon: FaWordpressSimple , color: "#3776AB" }, // Fixed: proper Python blue
+  { name: "Linux", icon: FaLinux, color: "#fff" }, // Fixed: changed from #ffff
 ];
 
 export default function Skills() {
   return (
     <section className="relative py-5 px-4 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-foreground/10 rounded-full blur-3xl animate-pulse delay-1000" />
-
+     <Blureffect />
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16" id="skills">
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4 py-2 leading-tight">
-            Technologies
+            Tech Stack
           </h2>
-          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-xl text-primary/80 max-w-2xl mx-auto">
             Tools and technologies I use to bring ideas to life
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function Skills() {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.07)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
-    </section>
+     <Pattern />
+     </section>
   );
 }

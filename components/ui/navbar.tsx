@@ -85,6 +85,9 @@ export default function Navbar() {
             variant="ghost"
             size="icon"
             className="rounded-xl text-foreground transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-lg"
+            onClick={() => {
+              window.open("https://github.com/rayyanlakhani", "_blank");
+            }}
           >
             <LuGithub className="size-5" />
           </Button>
@@ -92,18 +95,27 @@ export default function Navbar() {
             variant="ghost"
             size="icon"
             className="rounded-xl text-foreground transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-lg"
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/in/rayyan-lakhani-6b6950297/",
+                "_blank"
+              );
+            }}
           >
             <CiLinkedin className="size-5" />
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            title="Download my CV"
+            title="Download my resume"
             className="rounded-xl text-foreground transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-lg"
+            onClick={() => {
+              window.open("/Rayyan Lakhani Next.js.pdf", "_blank");
+            }}
           >
             <RxDownload className="size-5" />
           </Button>
-          <Button 
+          <Button
             className="rounded-xl bg-primary px-6 text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/40"
             onClick={(e) => handleNavClick("/#contact", e)}
           >
@@ -113,7 +125,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center gap-2 md:hidden"id="home">
+        <div className="flex items-center gap-2 md:hidden">
           <Button
             onClick={() => setIsOpen(!isOpen)}
             className="rounded-xl bg-primary/10 px-4 py-2 text-primary transition-all hover:bg-primary/30 hover:shadow-lg backdrop-blur-lg"
@@ -126,9 +138,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen
-            ? "mt-4 max-h-96 opacity-100"
-            : "max-h-0 opacity-0"
+          isOpen ? "mt-4 max-h-96 opacity-100" : "max-h-0 opacity-0"
         } w-full`}
       >
         {/* Apply blur to the outer container instead */}
@@ -149,6 +159,9 @@ export default function Navbar() {
                 variant="ghost"
                 size="sm"
                 className="flex-1 rounded-lg text-card-foreground hover:bg-primary/20 hover:text-primary"
+                onClick={() => {
+                  window.open("https://github.com/rayyanlakhani", "_blank");
+                }}
               >
                 <LuGithub className="mr-2 size-4" />
                 GitHub
@@ -157,6 +170,12 @@ export default function Navbar() {
                 variant="ghost"
                 size="sm"
                 className="flex-1 rounded-lg text-card-foreground hover:bg-primary/20 hover:text-primary"
+                onClick={() => {
+                  window.open(
+                    "https://www.linkedin.com/in/rayyan-lakhani-6b6950297/",
+                    "_blank"
+                  );
+                }}
               >
                 <CiLinkedin className="mr-2 size-4" />
                 LinkedIn
@@ -176,6 +195,9 @@ export default function Navbar() {
                 variant="ghost"
                 size="sm"
                 className="flex-1 rounded-lg text-card-foreground hover:bg-primary/20 hover:text-primary"
+                onClick={() => {
+                  window.open("/Rayyan Lakhani Next.js.pdf", "_blank");
+                }}
               >
                 <RxDownload className="mr-2 size-4" />
                 Resume

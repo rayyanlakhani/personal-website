@@ -27,6 +27,8 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { CiLinkedin } from "react-icons/ci";
 import { LuGithub } from "react-icons/lu";
 import z from "zod";
+import Blureffect from "./blureffect";
+import Pattern from "./pattern";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -64,8 +66,7 @@ export default function Contact() {
   return (
     <section className="relative py-5 px-4 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/15 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-foreground/10 rounded-full blur-3xl animate-pulse delay-1000" />
+   <Blureffect />
 
       <div className="relative z-10 max-w-6xl mx-auto" id="contact">
         {/* Header */}
@@ -97,7 +98,7 @@ export default function Contact() {
           <div className="space-y-6">
             <Card className="bg-card/10 backdrop-blur-lg border-primary/20 hover:border-primary/40 active:border-primary/60 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 active:shadow-lg active:shadow-primary/20 h-fit">
               <CardHeader>
-                <CardTitle className="text-2xl text-foreground">
+                <CardTitle className="text-2xl text-primary">
                   Contact Info
                 </CardTitle>
                 <CardDescription className="text-card-foreground/80">
@@ -180,7 +181,7 @@ export default function Contact() {
           <div className="lg:col-span-2">
             <Card className="space-y-6 bg-card/10 backdrop-blur-lg border-foreground/20 hover:border-foreground/40 active:border-foreground/60 transition-all duration-300 hover:shadow-2xl hover:shadow-foreground/10 active:shadow-lg active:shadow-foreground/20">
               <CardHeader>
-                <CardTitle className="text-2xl text-foreground">
+                <CardTitle className="text-2xl text-primary">
                   Send Message
                 </CardTitle>
                 <CardDescription className="text-card-foreground/80">
@@ -315,7 +316,7 @@ export default function Contact() {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" />
+    <Pattern />
     </section>
   );
 }
