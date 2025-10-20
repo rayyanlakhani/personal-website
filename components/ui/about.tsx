@@ -95,7 +95,7 @@ export default function About() {
                 technology, where I can bring creative visions to life through
                 code. <br />
                 <br />
-                When I'm not coding, you can find me exploring new places,
+                When I&apos;m not coding, you can find me exploring new places,
                 indulging in my love for film, or challenging myself with a
               </p>
               <div className="mt-6 flex flex-wrap gap-2">

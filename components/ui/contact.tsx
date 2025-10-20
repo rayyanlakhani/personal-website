@@ -66,7 +66,7 @@ export default function Contact() {
   return (
     <section className="relative py-5 px-4 overflow-hidden">
       {/* Background Effects */}
-   <Blureffect />
+      <Blureffect />
 
       <div className="relative z-10 max-w-6xl mx-auto" id="contact">
         {/* Header */}
@@ -75,8 +75,8 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-            Have a project in mind? Let's work together to bring your ideas to
-            life.
+            Have a project in mind? Let&apos;s work together to bring your ideas
+            to life.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
             <Alert className="bg-green-500/10 border-green-500/20 text-green-600">
               <CheckCircle className="h-4 w-4" />
               <AlertDescription>
-                Thank you for your message! I'll get back to you as soon as
+                Thank you for your message! I&apos;ll get back to you as soon as
                 possible.
               </AlertDescription>
             </Alert>
@@ -185,8 +185,8 @@ export default function Contact() {
                   Send Message
                 </CardTitle>
                 <CardDescription className="text-card-foreground/80">
-                  Fill out the form below and I'll get back to you as soon as
-                  possible
+                  Fill out the form below and I&apos;ll get back to you as soon
+                  as possible
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -316,7 +316,7 @@ export default function Contact() {
       </div>
 
       {/* Grid Pattern Overlay */}
-    <Pattern />
+      <Pattern />
     </section>
   );
 }
