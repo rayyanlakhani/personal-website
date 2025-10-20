@@ -33,7 +33,7 @@ export default function About() {
     {
       name: "Film",
       level: 95,
-      icon: MdMovie ,
+      icon: MdMovie,
       color: "from-primary to-foreground",
       stat: "David Lynch Fan",
     },
@@ -42,7 +42,7 @@ export default function About() {
       level: 88,
       icon: Users,
       color: "from-foreground to-primary",
-      stat: "Love New Prespectives",
+      stat: "New Prespectives",
     },
   ];
 
@@ -81,8 +81,10 @@ export default function About() {
                 </CardTitle>
               </div>
               <CardDescription className="text-lg text-primary">
-                From concept to deployment, <span className="text-primary">I love every step of the creative process.</span>
-               
+                From concept to deployment,{" "}
+                <span className="text-primary">
+                  I love every step of the creative process.
+                </span>
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -91,7 +93,8 @@ export default function About() {
                 in creating responsive, performant, and accessible web
                 applications. My passion lies in the intersection of design and
                 technology, where I can bring creative visions to life through
-                code. <br /><br />
+                code. <br />
+                <br />
                 When I'm not coding, you can find me exploring new places,
                 indulging in my love for film, or challenging myself with a
               </p>
@@ -155,11 +158,10 @@ export default function About() {
             <div id="skills" />{" "}
           </Card>
         </div>
-        
       </div>
 
       {/* Grid Pattern Overlay */}
-     <Pattern />
+      <Pattern />
     </section>
   );
 }
